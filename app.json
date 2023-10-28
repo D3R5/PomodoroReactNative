@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "appExpo1",
-    "slug": "appExpo1",
+    "name": "Pomodoro",
+    "slug": "Pomodoro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
