@@ -1,4 +1,5 @@
-import { View, Text, TouchableOpacity, StyleSheet, Pressable } from "react-native-web";
+import React from "react";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 
 const options = ["Pomodoro", "Short Break", "Long Break"];
 
@@ -15,9 +16,12 @@ export default function Header({ currentTime, setCurrentTime, setTime }) {
         <Pressable
           key={index}
           onPress={() => handlePress(index)}
-          style={[styles.itemStyle, currentTime !== index && {borderColor: "transparent"}]}
+          style={[
+            styles.itemStyle,
+            currentTime !== index && { borderColor: "transparent" },
+          ]}
         >
-          <Text style={{fontWeight: "bold"}}>{item}</Text>
+          <Text style={{ fontWeight: "bold" }}>{item}</Text>
         </Pressable>
       ))}
     </View>
@@ -27,7 +31,7 @@ export default function Header({ currentTime, setCurrentTime, setTime }) {
 const styles = StyleSheet.create({
   itemStyle: {
     width: "33%",
-    alingItems: "center",
+    alignItems: "center",
     borderWidth: 3,
     padding: 5,
     borderRadius: 10,

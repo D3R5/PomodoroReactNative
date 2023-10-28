@@ -1,4 +1,3 @@
-// import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Platform,
@@ -6,7 +5,6 @@ import {
   View,
   Button,
   SafeAreaView,
-  TouchableOpacity,
   Pressable
 } from "react-native";
 import { useState, useEffect } from "react";
@@ -69,7 +67,7 @@ export default function App() {
           paddingTop: Platform.OS === "android" && 30,
         }}
       >
-        <Text style={styles.text}>Pomodoro</Text>
+        <Text style={styles.text}>Pomodoro App</Text>
         <Header
           currentTime={currentTime}
           setCurrentTime={setCurrentTime}
@@ -81,7 +79,6 @@ export default function App() {
             {isActive ? "STOP" : "START"}{" "}
           </Text>
         </Pressable>
-        {/* <StatusBar style="auto" /> */}
       </View>
     </SafeAreaView>
   );
